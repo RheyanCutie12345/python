@@ -1,0 +1,88 @@
+@font-face {
+    font-family: MyFont;
+    src: url('hurme.otf') format('truetype');
+  }
+body{
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
+   margin: 0;
+    background-repeat: no-repeat;
+    padding: 0;
+    font-family: MyFont, sans-serif;
+   display: grid;
+   place-items: center;
+}
+.login{
+  width: 40%;
+  margin-top: 10vh;
+  height: 70vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:rgb(69, 227, 255, 0.4);
+  box-shadow: 1px 0px 30px rgb(2, 20, 42);
+  padding: 2%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 50%;
+  align-items: center;
+}
+.login h1{
+  font-size:2rem;
+}
+
+form input[type=email]{
+  width: 100%;
+  margin-top:20px;
+  height: 40px;
+  border-radius: 4px;
+  font-family: MyFont, sans-serif;
+  border:0.2px solid gray;
+}
+form input[type=submit]{
+  width: 100%;
+  margin-top: 20px;
+  height: 40px;
+  background-color: #6F88FC;
+  border: none;
+border-radius: 3px;
+color: white;
+font-family: MyFont, sans-serif;
+margin-bottom: 10%;
+}
+.image{
+  width: 100%;
+  height:100%;
+}
+a{
+  width: 40%;
+  height: 50%;
+  color: white;
+}
+h1, p{
+  color: rgb(2, 22, 46);
+}
+form button i{
+  height: 100%;
+}
+@media (max-width:700px){
+ body{
+      background-image: url("../images/bg2.jpg");
+      background-size: fill;
+      background-position: fixed;
+      height: 100vh;
+    }
+    .login{
+      width: 80%;
+      text-align: center;
+    }
+    form{
+      width: 70%;
+    }
+
+}

@@ -1,0 +1,228 @@
+@font-face {
+    font-family: MyFont;
+    src: url('hurme.otf') format('truetype');
+  }
+body{
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
+   margin: 0;
+    background-repeat: no-repeat;
+    padding: 0;
+    font-family: MyFont, sans-serif;
+}
+header .logo h2{
+    color:rgb(49, 87, 240);
+}
+header{
+    height: 13vh;
+    width: 100%;
+    display: flex;
+}
+.logo{
+    height: 100%;
+    padding-left: 4%;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    height: 100%;
+}
+nav li{
+    display:inline-block;
+    margin-left: 10%;
+
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+nav li a:hover{
+  text-decoration: underline;
+}
+nav{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+.menu{
+    display: none;
+    height: 100%;
+    width: 20%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.container{
+  width: 100%;
+  height:85vh;
+  display: flex;
+}
+ .left, .right{
+height: 100%;
+width: 50%;
+
+}
+
+.right{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.right .cont{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.right .cont img{
+  width: 100%;
+  height: 100%;
+  filter: contrast(120%);
+}
+.left{
+  display:  flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left h1{
+  font-size: 4rem;
+  margin-bottom: -10px;
+}
+.left h1 span{
+  color: aliceblue;
+}
+.left h4{
+  margin-top: 0px;
+}
+.signup, .login{
+  height: 2.5rem;
+  width: 8rem;
+  border: none;
+  border-radius:5px;
+  margin-right: 0.4rem ;
+  font-family: MyFont, sans-serif;
+}
+.login{
+  background-color: #45E3FF;
+}
+.signup{
+  background-color: #6F88FC;
+}
+#x{
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  margin-left: 80%;
+  display: none;
+  margin-top: -40%;
+}
+#x:hover{
+  cursor: pointer;
+}
+.login:hover{
+  background-color: #65e8ff;
+  cursor: pointer;
+}
+.signup:hover{
+  background-color: #7c92ff;
+  cursor: pointer;
+}
+
+@media (max-width:700px){
+    .logo{
+        width: 100%;
+       padding-left: 0%;
+    }
+    body{
+      background-image: url("../images/bg2.jpg");
+      background-size: fill;
+      background-position: fixed;
+    }
+  h3{
+    font-size: 15px;
+    position: fixed;
+  }
+  nav {
+    position: relative;
+    width: 60%;
+    height: 550%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    display: none;
+    flex-grow: 1;
+    float: right;
+    animation: open 1s linear;
+  }
+  .nav-closed {
+    animation: close 1s linear;
+
+  }
+#x{
+  display: flex;
+}
+
+.left .contL h1{
+  font-size: 50px;
+}
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: #45E3FF;
+  }
+  @keyframes open{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 60%;
+    }
+  }
+  @keyframes close{
+    0%{
+      width: 60%;
+    }
+    100%{
+      width: 0%;
+
+    }
+  }
+  nav > * {
+    position: relative;
+    z-index: 1;
+  }
+  nav li{
+    margin-top: 20%;
+  }
+  .menu{
+    display: block;
+    margin-left: 20%;
+  }
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .left, .right{
+    width: 100%;
+  }
+  .left .contL{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}

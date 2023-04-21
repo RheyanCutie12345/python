@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Jaeden Log In</title>
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://kit.fontawesome.com/ccaf8ead0b.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+</head>
+<body>
+    <div class="login">
+       <a href="{% url 'index' %}"> <img class="image" src="{% static  'images/logo.png' %}" alt="logo"></a>
+        <h1>Customer Email Access</h1>
+        <form id="form" method="post">
+            <input type="email" name="email" id="email" placeholder="Email" required autocomplete="on">
+            <input type="submit" name="login" id="submit" value="Log In">
+            <p>Not signed up Yet? Click <a href="signup.html">Here</a></p>
+        </form>
+
+    </div>
+</body>
+</html>
